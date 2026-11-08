@@ -1,0 +1,354 @@
+<title>Стили Тихих вод</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rubik+Mono+One&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400&family=Manrope:wght@400;600&display=swap">
+<style>
+/* Layout: a neutral gallery frame; three phone-sized worlds, three screens each, side by side. */
+:root {
+  --bg: #EEF0EE; --fg: #1B2226; --muted: #5F6A70; --line: #D3D8D6; --card: #F8F9F8; --chip: #E2E6E4;
+  --ui: "Manrope", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #101315; --fg: #E6EAE8; --muted: #95A0A4; --line: #252B2E; --card: #171B1E; --chip: #20262A; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #101315; --fg: #E6EAE8; --muted: #95A0A4; --line: #252B2E; --card: #171B1E; --chip: #20262A; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--ui); font-size: 15px; line-height: 1.55; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 40px 80px; }
+header.intro h1 { font: 600 30px/1.2 var(--ui); margin: 0; text-wrap: balance; letter-spacing: -0.01em }
+header.intro p { color: var(--muted); max-width: 62ch; margin: 10px 0 0 }
+.concept { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 28px }
+.c-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: end }
+.c-head .num { font: 600 12px/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--muted) }
+.c-head h2 { margin: 6px 0 0; font: 600 26px/1.2 var(--ui); text-wrap: balance }
+.c-head p { margin: 8px 0 0; color: var(--muted); max-width: 66ch }
+.swatches { display: flex; gap: 6px }
+.swatches i { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); display: block }
+.phones { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; justify-content: flex-start }
+.phone { width: 300px; max-width: 100%; height: 620px; border-radius: 42px; overflow: hidden; position: relative; flex: 0 0 auto; box-shadow: 0 0 0 8px var(--chip), 0 30px 60px -30px rgba(0,0,0,.35) }
+.cap { font-size: 12.5px; color: var(--muted); margin-top: 14px; text-align: center }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px }
+.notes div { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; min-width: 0 }
+.notes b { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px }
+.status { position: absolute; top: 0; left: 0; right: 0; height: 34px; display: flex; justify-content: space-between; padding: 12px 26px 0; font: 600 11px/1 var(--ui); z-index: 5 }
+
+/* ───────── 1. ЛИЦЕВОЙ СПИСОК — icon & illuminated manuscript ───────── */
+.ms { --lapis: #1A2B57; --lapis2: #10193A; --gold: #D9B45A; --gold2: #F4DF9B; --kinovar: #B5321F; --vellum: #EFE2C2; --ink: #2A1E14; background: var(--lapis); color: var(--vellum); font-family: "Old Standard TT", Georgia, serif }
+.ms .status { color: var(--gold2) }
+.ms .pattern { position: absolute; inset: 0; opacity: .14; background-image: radial-gradient(circle at 50% 50%, var(--gold) 1.2px, transparent 1.6px), radial-gradient(circle at 0 0, var(--gold) 1px, transparent 1.4px); background-size: 22px 22px, 22px 22px; background-position: 0 0, 11px 11px }
+.ms .gold { background: linear-gradient(135deg, #9C7426, var(--gold) 30%, var(--gold2) 50%, var(--gold) 70%, #8A6420); -webkit-background-clip: text; background-clip: text; color: transparent }
+.ms .home { position: relative; padding: 48px 20px 20px; height: 100% }
+.ms .title { font-family: "Ruslan Display", "Old Standard TT", serif; font-size: 34px; line-height: 1; text-align: center; letter-spacing: .02em }
+.ms .sub { text-align: center; font-style: italic; font-size: 13px; color: var(--gold2); margin-top: 6px; opacity: .85 }
+.ms .orn { display: block; margin: 10px auto 0 }
+.ms .nimbus { margin: 16px auto 0; width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; position: relative; background: radial-gradient(circle, #F7E7B0 0 38%, var(--gold) 39% 62%, #A57C2C 63% 64%, transparent 65%); box-shadow: 0 0 40px rgba(244,223,155,.35) }
+.ms .nimbus span { font-family: "Ruslan Display", serif; color: var(--lapis2); font-size: 15px; text-align: center; line-height: 1.15; width: 70px }
+.ms .nimbus::before { content: ""; position: absolute; inset: -14px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, rgba(244,223,155,.55) 0 2deg, transparent 2deg 15deg); -webkit-mask: radial-gradient(circle, transparent 66%, #000 67%); mask: radial-gradient(circle, transparent 66%, #000 67%) }
+.ms .arches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px }
+.ms .arch { background: var(--vellum); color: var(--ink); border-radius: 40px 40px 6px 6px; padding: 14px 4px 8px; text-align: center; font-size: 11px; line-height: 1.15; box-shadow: inset 0 0 0 2px var(--gold), inset 0 0 0 4px var(--vellum), inset 0 0 0 5px var(--kinovar) }
+.ms .arch svg { display: block; margin: 0 auto 5px }
+.ms .page { background: var(--vellum); color: var(--ink); height: 100%; padding: 46px 22px 22px; position: relative }
+.ms .page::after { content: ""; position: absolute; inset: 8px; border: 1.5px solid var(--kinovar); border-radius: 30px; pointer-events: none; opacity: .6 }
+.ms .rubric { color: var(--kinovar); font-family: "Ruslan Display", serif; font-size: 14px; letter-spacing: .08em; text-align: center; margin-top: 8px }
+.ms .verse { font-size: 18px; line-height: 1.5; margin-top: 12px }
+.ms .drop { float: left; font-family: "Ruslan Display", serif; font-size: 58px; line-height: .8; color: var(--kinovar); margin: 6px 8px 0 0; padding: 4px 6px; background: radial-gradient(circle at 50% 55%, rgba(217,180,90,.35), transparent 70%) }
+.ms .ref { color: var(--kinovar); font-size: 12.5px; margin-top: 8px; font-style: italic }
+.ms .why { font-size: 13.5px; line-height: 1.5; margin-top: 12px; border-top: 1px solid rgba(181,50,31,.3); padding-top: 10px }
+.ms .breath { position: relative; height: 100%; display: grid; place-items: center; text-align: center; padding: 40px 22px }
+.ms .halo { width: 210px; height: 210px; border-radius: 50%; position: relative; display: grid; place-items: center; animation: msBreath 10s ease-in-out infinite }
+.ms .halo::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: repeating-conic-gradient(rgba(244,223,155,.7) 0 1.5deg, transparent 1.5deg 9deg); -webkit-mask: radial-gradient(circle, transparent 52%, #000 53%, #000 70%, transparent 71%); mask: radial-gradient(circle, transparent 52%, #000 53%, #000 70%, transparent 71%) }
+.ms .halo::after { content: ""; position: absolute; inset: 28%; border-radius: 50%; background: radial-gradient(circle, #FBF0C8, var(--gold) 70%, #9C7426); box-shadow: 0 0 50px rgba(244,223,155,.6) }
+.ms .phrase { font-family: "Ruslan Display", serif; font-size: 22px; color: var(--gold2); margin-top: 22px; line-height: 1.2 }
+.ms .phrase2 { color: var(--vellum); font-style: italic; font-size: 14px; opacity: .8; margin-top: 6px }
+@keyframes msBreath { 0%,100% { transform: scale(.82) } 40% { transform: scale(1.05) } }
+
+/* ───────── 2. САМИЗДАТ — two-ink risograph zine ───────── */
+.rz { --paper: #F3EFE4; --pink: #FF4FA3; --blue: #1E6FD9; --inkb: #19305E; background: var(--paper); color: var(--inkb); font-family: "IBM Plex Mono", ui-monospace, monospace; position: relative }
+.rz::before { content: ""; position: absolute; inset: 0; opacity: .5; mix-blend-mode: multiply; pointer-events: none; z-index: 4; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .5  0 0 0 0 .42  0 0 0 .35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>") }
+.rz .status { color: var(--inkb) }
+.rz .in { padding: 44px 18px 18px; position: relative; height: 100% }
+.rz .mast { font-family: "Rubik Mono One", sans-serif; font-size: 40px; line-height: .92; color: var(--blue); position: relative; letter-spacing: -.02em }
+.rz .mast span { position: absolute; left: 3px; top: 3px; color: var(--pink); mix-blend-mode: multiply }
+.rz .kicker { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; margin-top: 10px }
+.rz .sticker { margin-top: 16px; background: var(--pink); color: var(--paper); padding: 14px 14px 12px; transform: rotate(-2.5deg); box-shadow: 4px 4px 0 var(--blue); position: relative }
+.rz .sticker b { font-family: "Rubik Mono One", sans-serif; font-weight: 400; font-size: 17px; display: block; line-height: 1.05 }
+.rz .sticker small { font-size: 11px }
+.rz .tape { position: absolute; top: -9px; right: 22px; width: 54px; height: 18px; background: rgba(30,111,217,.35); transform: rotate(8deg) }
+.rz .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px }
+.rz .tag { border: 1.5px solid var(--blue); padding: 6px 9px; font-size: 11.5px; border-radius: 2px; background: var(--paper) }
+.rz .tag:nth-child(3n) { transform: rotate(1.5deg); border-color: var(--pink); color: #B21F67 }
+.rz .tag:nth-child(4n+1) { transform: rotate(-1deg) }
+.rz .halftone { position: absolute; right: -40px; bottom: -40px; width: 200px; height: 200px; border-radius: 50%; background-image: radial-gradient(var(--pink) 30%, transparent 31%); background-size: 9px 9px; opacity: .9; -webkit-mask: radial-gradient(circle, #000 30%, transparent 70%); mask: radial-gradient(circle, #000 30%, transparent 70%) }
+.rz .label { display: inline-block; background: var(--blue); color: var(--paper); font-size: 10.5px; letter-spacing: .14em; padding: 4px 8px; text-transform: uppercase }
+.rz .big { font-family: "Rubik Mono One", sans-serif; font-size: 22px; line-height: 1.12; margin-top: 14px; color: var(--inkb) }
+.rz mark { background: linear-gradient(transparent 52%, rgba(255,79,163,.55) 52% 90%, transparent 90%); color: inherit }
+.rz .refline { font-size: 11px; margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap }
+.rz .refline span { border: 1px dashed var(--inkb); padding: 2px 6px }
+.rz .note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; background: #fff8; border-left: 4px solid var(--pink); padding: 10px 12px }
+.rz .scribble { font-style: italic; color: #B21F67; font-size: 12px; margin-top: 10px; transform: rotate(-1.5deg) }
+.rz .dotball { width: 220px; height: 220px; margin: 30px auto 0; position: relative; animation: rzBreath 10s ease-in-out infinite }
+.rz .dotball i { position: absolute; inset: 0; border-radius: 50%; background-image: radial-gradient(currentColor 34%, transparent 36%); background-size: 10px 10px }
+.rz .dotball i:first-child { color: var(--blue); }
+.rz .dotball i:last-child { color: var(--pink); mix-blend-mode: multiply; transform: translate(7px, 5px); background-position: 5px 5px }
+.rz .count { font-family: "Rubik Mono One", sans-serif; text-align: center; font-size: 28px; margin-top: 26px; color: var(--blue) }
+.rz .count small { display: block; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--inkb); margin-top: 6px }
+@keyframes rzBreath { 0%,100% { transform: scale(.72) rotate(0deg) } 40% { transform: scale(1) rotate(8deg) } }
+
+/* ───────── 3. НЕБОСВОД — star atlas for night anxiety ───────── */
+.sk { --night: #0B1020; --night2: #141B33; --brass: #C8A46A; --brass2: #E9D3A1; --dust: #8C94B8; --star: #F4EFE2; background: radial-gradient(120% 80% at 70% 0%, #1A2347 0%, var(--night) 60%); color: var(--star); font-family: "Cormorant Garamond", Georgia, serif }
+.sk .status { color: var(--brass2) }
+.sk canvas { position: absolute; inset: 0; width: 100%; height: 100% }
+.sk .layer { position: relative; z-index: 2; padding: 46px 22px 22px; height: 100% }
+.sk .coord { font-family: "JetBrains Mono", monospace; font-weight: 300; font-size: 9.5px; letter-spacing: .14em; color: var(--dust); text-transform: uppercase }
+.sk h3 { font-weight: 400; font-size: 34px; line-height: 1.05; margin: 8px 0 0; color: var(--star) }
+.sk h3 em { color: var(--brass2) }
+.sk .q { font-style: italic; font-size: 14px; color: var(--dust); margin-top: 8px }
+.sk .chart { position: relative; height: 300px; margin-top: 8px }
+.sk .chart svg { position: absolute; inset: 0 }
+.sk .orbitbtn { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); width: 236px; border: 1px solid var(--brass); border-radius: 999px; padding: 12px 18px; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass2); background: rgba(11,16,32,.6); z-index: 3 }
+.sk .orbitbtn::before { content: "◦"; margin-right: 8px }
+.sk .ring { width: 230px; height: 230px; margin: 0 auto; position: relative }
+.sk .vcard { margin-top: 18px; font-size: 21px; line-height: 1.45 }
+.sk .vcard .n { font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--brass); vertical-align: super; margin-right: 3px }
+.sk .meta { display: flex; justify-content: space-between; margin-top: 12px; border-top: 1px solid rgba(200,164,106,.35); padding-top: 8px }
+.sk .why { margin-top: 14px; font-size: 15px; line-height: 1.5; color: #C9CCE0 }
+.sk .orbit { position: relative; width: 240px; height: 240px; margin: 40px auto 0 }
+.sk .orbit .track { position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(200,164,106,.5) }
+.sk .orbit .track.t2 { inset: 30px; border-style: dashed; border-color: rgba(140,148,184,.35) }
+.sk .orbit .sun { position: absolute; inset: 88px; border-radius: 50%; background: radial-gradient(circle, #FFF6DD, var(--brass2) 45%, rgba(200,164,106,0) 72%); animation: skPulse 10s ease-in-out infinite }
+.sk .orbit .planet { position: absolute; inset: 0; animation: skSpin 10s linear infinite }
+.sk .orbit .planet::after { content: ""; position: absolute; top: -6px; left: 50%; margin-left: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--star); box-shadow: 0 0 14px var(--brass2) }
+.sk .ph { text-align: center; margin-top: 28px; font-size: 24px; font-style: italic; color: var(--star) }
+.sk .ph small { display: block; font-family: "JetBrains Mono", monospace; font-style: normal; font-size: 10px; letter-spacing: .14em; color: var(--dust); margin-top: 8px; text-transform: uppercase }
+@keyframes skSpin { to { transform: rotate(360deg) } }
+@keyframes skPulse { 0%,100% { transform: scale(.8); opacity: .75 } 40% { transform: scale(1.15); opacity: 1 } }
+
+@media (prefers-reduced-motion: reduce) { .ms .halo, .rz .dotball, .sk .orbit .planet, .sk .orbit .sun { animation: none } }
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <h1>Три стиля для «Тихих вод»</h1>
+    <p>Три разных мира для одного приложения. В каждом три экрана: главная, карточка со стихом и дыхательная молитва. Дыхание анимировано в настоящем ритме: 4 секунды вдох, 6 секунд выдох. Тексты Писания — Синодальный перевод.</p>
+  </header>
+
+  <!-- 1 -->
+  <section class="concept">
+    <div class="c-head">
+      <div>
+        <div class="num">Стиль 1</div>
+        <h2>Лицевой список</h2>
+        <p>Икона и древнерусская рукопись. Лазурь, сусальное золото и киноварь, буквицы, арки-закомары вместо карточек, нимб вместо кнопки. Тревожному человеку отвечает не интерфейс, а традиция, которой тысяча лет.</p>
+      </div>
+      <div class="swatches" aria-label="Палитра"><i style="background:#1A2B57"></i><i style="background:#D9B45A"></i><i style="background:#B5321F"></i><i style="background:#EFE2C2"></i></div>
+    </div>
+    <div class="phones">
+      <figure style="margin:0">
+        <div class="phone ms">
+          <div class="pattern"></div>
+          <div class="status"><span>9:41</span><span>Срочная помощь</span></div>
+          <div class="home">
+            <div class="title gold">Тихие воды</div>
+            <div class="sub">«…водит меня к водам тихим»</div>
+            <svg class="orn" width="160" height="12" viewBox="0 0 160 12" aria-hidden="true"><path d="M0 6h62M98 6h62" stroke="#D9B45A" stroke-width="1"/><path d="M80 1l5 5-5 5-5-5z" fill="#B5321F"/><circle cx="68" cy="6" r="2" fill="#D9B45A"/><circle cx="92" cy="6" r="2" fill="#D9B45A"/></svg>
+            <div class="nimbus"><span>Мне тре&shy;вожно</span></div>
+            <div class="arches">
+              <div class="arch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5321F" stroke-width="1.6" stroke-linecap="round"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5Z"/></svg>Не могу уснуть</div>
+              <div class="arch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5321F" stroke-width="1.6" stroke-linecap="round"><path d="M12 20s-7.5-4.4-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/></svg>Сердце колотится</div>
+              <div class="arch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5321F" stroke-width="1.6" stroke-linecap="round"><path d="M3 16h18M7 16a5 5 0 0 1 10 0M12 5.5v2.5"/></svg>Страшно за будущее</div>
+              <div class="arch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5321F" stroke-width="1.6" stroke-linecap="round"><path d="M12 21v-6M12 3c3.5 2.5 6 5.5 6 8.5a6 6 0 0 1-12 0C6 8.5 8.5 5.5 12 3Z"/></svg>Нет сил</div>
+              <div class="arch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5321F" stroke-width="1.6" stroke-linecap="round"><path d="M12 3.5c1.6 2 2.5 3.5 2.5 5a2.5 2.5 0 0 1-5 0c0-1.5.9-3 2.5-5ZM9 13h6l-1 7h-4z"/></svg>Одиноко</div>
+              <div class="arch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5321F" stroke-width="1.6" stroke-linecap="round"><path d="M4 17h16M7.5 17a4.5 4.5 0 0 1 9 0M12 7v3"/></svg>Вина и стыд</div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="cap">Главная: нимб — кнопка SOS, арки — состояния</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="phone ms">
+          <div class="status" style="color:#B5321F"><span>9:41</span><span>Срочная помощь</span></div>
+          <div class="page">
+            <svg width="100%" height="26" viewBox="0 0 256 26" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 Q32 2 64 22 T128 22 T192 22 T256 22" fill="none" stroke="#B5321F" stroke-width="1.5"/><path d="M0 22 Q32 8 64 22 T128 22 T192 22 T256 22" fill="none" stroke="#D9B45A" stroke-width="1"/><circle cx="128" cy="10" r="4" fill="#1A2B57"/><circle cx="64" cy="12" r="2.5" fill="#B5321F"/><circle cx="192" cy="12" r="2.5" fill="#B5321F"/></svg>
+            <div class="rubric">СЛОВО</div>
+            <div class="verse"><span class="drop">Б</span>ог нам прибежище и сила, скорый помощник в бедах, посему не убоимся, хотя бы поколебалась земля, и горы двинулись в сердце морей.</div>
+            <div class="ref">Псалом 45, 2–3 · по-еврейски 46, 1–2</div>
+            <div class="why">Псалом описывает внутреннюю катастрофу языком землетрясения — и ставит в центр одну опору. Это не запрет бояться, а место, куда прийти со страхом.</div>
+            <div class="rubric" style="margin-top:14px">ТОЛКОВАНИЕ</div>
+            <div class="why" style="border:0;padding-top:4px"><i>Свт. Иоанн Златоуст:</i> Христос запрещает не труд, а изнурение заботами.</div>
+          </div>
+        </div>
+        <figcaption class="cap">Карточка: буквица, рубрика киноварью, заставка</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="phone ms">
+          <div class="pattern"></div>
+          <div class="status"><span>9:41</span><span>Срочная помощь</span></div>
+          <div class="breath">
+            <div>
+              <div class="halo"></div>
+              <div class="phrase">Бог — прибежище</div>
+              <div class="phrase2">и сила моя · вдох 4 · выдох 6</div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="cap">Дыхание: золотой нимб расширяется и сходится</figcaption>
+      </figure>
+    </div>
+    <div class="notes">
+      <div><b>Кому</b>Православным и тем, кого трогает красота традиции. Сильнее всего для русскоязычной аудитории.</div>
+      <div><b>Сильная сторона</b>Ни одно приложение на рынке так не выглядит. Узнаётся с одного скриншота.</div>
+      <div><b>Риск</b>Может отпугнуть протестантов и людей вне Церкви. Нужна сдержанность, чтобы не превратиться в сувенир.</div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="concept">
+    <div class="c-head">
+      <div>
+        <div class="num">Стиль 2</div>
+        <h2>Самиздат</h2>
+        <p>Ризограф-зин в две краски: розовая и синяя поверх бумаги, со сдвигом печати, растром, скотчем и стикерами. Похоже на молитвенник, который друг сделал для тебя от руки. Дерзко, тепло и совсем не «церковно».</p>
+      </div>
+      <div class="swatches" aria-label="Палитра"><i style="background:#F3EFE4"></i><i style="background:#FF4FA3"></i><i style="background:#1E6FD9"></i><i style="background:#19305E"></i></div>
+    </div>
+    <div class="phones">
+      <figure style="margin:0">
+        <div class="phone rz">
+          <div class="status"><span>9:41</span><span>SOS ✚</span></div>
+          <div class="in">
+            <div class="mast">ТИХО.<span>ТИХО.</span></div>
+            <div class="kicker">выпуск №1 · для тревожных минут</div>
+            <div class="sticker"><div class="tape"></div><b>МНЕ ТРЕВОЖНО СЕЙЧАС</b><small>→ 2 минуты дышим вместе</small></div>
+            <div class="kicker" style="margin-top:22px">что со мной:</div>
+            <div class="tags">
+              <span class="tag">не могу уснуть</span><span class="tag">мысли по кругу</span><span class="tag">сердце колотится</span><span class="tag">боюсь будущего</span><span class="tag">нет сил</span><span class="tag">одиноко</span><span class="tag">вина</span><span class="tag">страх людей</span><span class="tag">деньги</span><span class="tag">за близких</span>
+            </div>
+            <div class="halftone"></div>
+          </div>
+        </div>
+        <figcaption class="cap">Главная: заголовок со сдвигом печати, теги-бирки</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="phone rz">
+          <div class="status"><span>9:41</span><span>SOS ✚</span></div>
+          <div class="in">
+            <span class="label">слово</span>
+            <div class="big">«КОГДА Я <mark>В СТРАХЕ</mark>, НА ТЕБЯ Я УПОВАЮ.»</div>
+            <div class="refline"><span>Пс 55:4</span><span>Ps 56:3</span><span>синодальный</span></div>
+            <div class="note">«Когда», а не «если». Давид не притворяется смелым. Он просто знает, куда смотреть внутри страха.</div>
+            <div class="scribble">↳ страх не значит, что ты плохой христианин</div>
+            <span class="label" style="margin-top:18px;background:#FF4FA3">практика · 2 мин</span>
+            <div class="note" style="border-color:#1E6FD9">1. Ступни на пол.<br>2. Вдох 4 — «когда я в страхе».<br>3. Выдох 6 — «на Тебя уповаю».</div>
+          </div>
+        </div>
+        <figcaption class="cap">Карточка: стих крупно, маркер, заметки на полях</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="phone rz">
+          <div class="status"><span>9:41</span><span>SOS ✚</span></div>
+          <div class="in">
+            <span class="label">дышим</span>
+            <div class="dotball"><i></i><i></i></div>
+            <div class="count">ВДОХ<small>«Когда я в страхе…» · 3 / 10</small></div>
+          </div>
+        </div>
+        <figcaption class="cap">Дыхание: растровый шар в две краски</figcaption>
+      </figure>
+    </div>
+    <div class="notes">
+      <div><b>Кому</b>Молодёжь 16–30, студенты, люди из протестантских и молодёжных общин, «неверующие, но ищущие».</div>
+      <div><b>Сильная сторона</b>Снимает пафос и стыд: о тревоге здесь говорят просто, как друг. Отлично выглядит в соцсетях.</div>
+      <div><b>Риск</b>Для пожилых и для острой паники может быть слишком шумно. Нужен «тихий режим» для SOS.</div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="concept">
+    <div class="c-head">
+      <div>
+        <div class="num">Стиль 3</div>
+        <h2>Небосвод</h2>
+        <p>Звёздный атлас для ночной тревоги. Состояния — звёзды созвездия, линии латунной гравировки, координаты стихов вместо обычных ссылок. Дыхание — планета на орбите. «Посмотри на небо и сосчитай звёзды» (Быт 15:5).</p>
+      </div>
+      <div class="swatches" aria-label="Палитра"><i style="background:#0B1020"></i><i style="background:#C8A46A"></i><i style="background:#8C94B8"></i><i style="background:#F4EFE2"></i></div>
+    </div>
+    <div class="phones">
+      <figure style="margin:0">
+        <div class="phone sk">
+          <canvas data-stars="140" aria-hidden="true"></canvas>
+          <div class="status"><span>9:41</span><span>Срочная помощь</span></div>
+          <div class="layer">
+            <div class="coord">Тихие воды · созвездие тревог</div>
+            <h3>Что у тебя<br><em>на сердце?</em></h3>
+            <div class="q">«исчисляет количество звёзд; всех их называет именами их» — Пс 146:4</div>
+            <div class="chart">
+              <svg viewBox="0 0 256 300" width="100%" height="300" aria-hidden="true">
+                <g stroke="#C8A46A" stroke-width=".8" opacity=".7" fill="none"><path d="M40 60 L110 40 L170 90 L220 70"/><path d="M110 40 L95 140 L160 170 L210 150"/><path d="M95 140 L50 200 L120 240"/><path d="M160 170 L190 230"/></g>
+                <g fill="#F4EFE2"><circle cx="40" cy="60" r="3"/><circle cx="110" cy="40" r="4"/><circle cx="170" cy="90" r="3"/><circle cx="220" cy="70" r="2.5"/><circle cx="95" cy="140" r="4.5"/><circle cx="160" cy="170" r="3"/><circle cx="210" cy="150" r="2.5"/><circle cx="50" cy="200" r="3"/><circle cx="120" cy="240" r="3.5"/><circle cx="190" cy="230" r="3"/></g>
+                <g font-family="Cormorant Garamond, serif" font-size="11.5" fill="#E9D3A1" font-style="italic"><text x="30" y="80">бессонница</text><text x="96" y="30">мысли по кругу</text><text x="150" y="110">будущее</text><text x="106" y="138">паника</text><text x="150" y="190">нет сил</text><text x="16" y="222">одиночество</text><text x="100" y="262">вина</text><text x="176" y="250">близкие</text></g>
+              </svg>
+            </div>
+          </div>
+          <div class="orbitbtn">Мне тревожно сейчас</div>
+        </div>
+        <figcaption class="cap">Главная: созвездие состояний на живом звёздном небе</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="phone sk">
+          <canvas data-stars="70" aria-hidden="true"></canvas>
+          <div class="status"><span>9:41</span><span>Срочная помощь</span></div>
+          <div class="layer">
+            <div class="coord">Звезда · бессонница</div>
+            <div class="vcard"><span class="n">9</span>Спокойно ложусь я и сплю, ибо Ты, Господи, един даешь мне жить в безопасности.</div>
+            <div class="meta"><span class="coord">Пс 4:9</span><span class="coord">Ps 4:8</span><span class="coord">Синодальный</span></div>
+            <div class="why">Давид ложится спать не потому, что опасность миновала, а потому что безопасность дарует Господь. «Хранитель не дремлет» — значит, мне можно спать.</div>
+            <div class="coord" style="margin-top:22px;color:#C8A46A">Практика · передача дежурства · 3 мин</div>
+            <div class="why" style="font-size:14px">Назовите одну–три заботы. После каждой: «Хранитель не дремлет. Передаю Тебе».</div>
+          </div>
+        </div>
+        <figcaption class="cap">Карточка: стих как запись в звёздном каталоге</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="phone sk">
+          <canvas data-stars="110" aria-hidden="true"></canvas>
+          <div class="status"><span>9:41</span><span>Срочная помощь</span></div>
+          <div class="layer">
+            <div class="coord" style="text-align:center">Один оборот — одно дыхание</div>
+            <div class="orbit"><div class="track"></div><div class="track t2"></div><div class="sun"></div><div class="planet"></div></div>
+            <div class="ph">Хранитель не дремлет<small>вдох 4 · выдох 6 · 5 / 10</small></div>
+          </div>
+        </div>
+        <figcaption class="cap">Дыхание: планета делает оборот за 10 секунд</figcaption>
+      </figure>
+    </div>
+    <div class="notes">
+      <div><b>Кому</b>Тем, кто тревожится ночью, — а это самая частая жалоба. Межконфессионально, подходит и вне Церкви.</div>
+      <div><b>Сильная сторона</b>Тёмный экран не слепит ночью. Созвездие делает навигацию по состояниям игрой, а не меню.</div>
+      <div><b>Риск</b>Днём выглядит слишком «ночным». Нужна дневная версия неба (рассвет) с той же логикой.</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// Seeded star fields for the Небосвод screens (deterministic, so screenshots match).
+(function () {
+  function rand(seed) { return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("canvas[data-stars]").forEach(function (cv, idx) {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2), w = 300, h = 620;
+    cv.width = w * dpr; cv.height = h * dpr;
+    var ctx = cv.getContext("2d"); ctx.scale(dpr, dpr);
+    var r = rand(7 + idx * 31), n = +cv.dataset.stars, stars = [];
+    for (var i = 0; i < n; i++) stars.push({ x: r() * w, y: r() * h, s: r() * 1.3 + 0.2, p: r() * Math.PI * 2 });
+    function draw(t) {
+      ctx.clearRect(0, 0, w, h);
+      stars.forEach(function (s) {
+        var a = 0.35 + 0.45 * (reduce ? 0.6 : (0.5 + 0.5 * Math.sin(t / 1400 + s.p)));
+        ctx.fillStyle = "rgba(244,239,226," + a.toFixed(3) + ")";
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.s, 0, Math.PI * 2); ctx.fill();
+      });
+      if (!reduce) requestAnimationFrame(draw);
+    }
+    draw(0);
+  });
+})();
+</script>
