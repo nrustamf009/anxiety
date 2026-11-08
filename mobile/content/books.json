@@ -1,0 +1,19 @@
+{
+  "Gen":  { "dataset": "Genesis",        "ru": "Быт",   "en": "Gen" },
+  "Deut": { "dataset": "Deuteronomy",    "ru": "Втор",  "en": "Deut" },
+  "Josh": { "dataset": "Joshua",         "ru": "Нав",   "en": "Josh" },
+  "1Kgs": { "dataset": "I Kings",        "ru": "3 Цар", "en": "1 Kgs" },
+  "Ps":   { "dataset": "Psalms",         "ru": "Пс",    "en": "Ps" },
+  "Prov": { "dataset": "Proverbs",       "ru": "Притч", "en": "Prov" },
+  "Isa":  { "dataset": "Isaiah",         "ru": "Ис",    "en": "Isa" },
+  "Lam":  { "dataset": "Lamentations",   "ru": "Плач",  "en": "Lam" },
+  "Matt": { "dataset": "Matthew",        "ru": "Мф",    "en": "Matt" },
+  "Mark": { "dataset": "Mark",           "ru": "Мк",    "en": "Mark" },
+  "Luke": { "dataset": "Luke",           "ru": "Лк",    "en": "Luke" },
+  "John": { "dataset": "John",           "ru": "Ин",    "en": "John" },
+  "Rom":  { "dataset": "Romans",         "ru": "Рим",   "en": "Rom" },
+  "2Cor": { "dataset": "II Corinthians", "ru": "2 Кор", "en": "2 Cor" },
+  "Phil": { "dataset": "Philippians",    "ru": "Флп",   "en": "Phil" },
+  "Heb":  { "dataset": "Hebrews",        "ru": "Евр",   "en": "Heb" },
+  "1Pet": { "dataset": "I Peter",        "ru": "1 Пет", "en": "1 Pet" }
+}

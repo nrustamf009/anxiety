@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Тихие воды",
+    "slug": "still-waters",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.stillwaters"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F5F0E6",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "app.stillwaters"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-splash-screen"
+    ],
+    "scheme": "stillwaters",
+    "description": "Писание и молитва для тревожных минут",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
