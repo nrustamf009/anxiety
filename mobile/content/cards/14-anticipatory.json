@@ -13,23 +13,30 @@
   "passages": [
     {
       "kind": "promise",
-      "book": "Deut", "syn": "31:8", "eng": "31:8",
+      "book": "Deut",
+      "syn": "31:8",
+      "eng": "31:8",
       "why_fits": "«Господь Сам пойдёт пред тобою» — Он уже там, куда вы идёте.",
       "misuse_warning": "Это не повод отказаться от подготовки. Иисус Навин готовился к пути — и получил ободрение."
     },
     {
       "kind": "promise",
-      "book": "Josh", "syn": "1:9", "eng": "1:9",
+      "book": "Josh",
+      "syn": "1:9",
+      "eng": "1:9",
       "context": "1:1-9",
       "why_fits": "Сказано новому вождю, которому страшно занять место Моисея. Мужество основано не на уверенности в себе, а на «с тобою Господь»."
     }
   ],
   "commentary": [
     {
-      "tradition": "ecumenical",
-      "author": "Редакция",
-      "summary": "Каждое «не бойся» в Писании несёт обоснование: «ибо Я с тобою». Это не голый запрет, а приглашение опереться.",
-      "source": { "title": "Desiring God — Read the Bible to Your Anxiety", "url": "https://desiringgod.org/articles/read-the-bible-to-your-anxiety" },
+      "tradition": "protestant",
+      "author": "Ч. Спёрджен, проповедь «A Cure for Care» (1862)",
+      "summary": "«Кто-то должен нести эти заботы… Мой Отец Небесный ждёт, чтобы понести мою ношу». Готовиться — наше дело; нести исход — Его.",
+      "source": {
+        "title": "C. H. Spurgeon, «A Cure for Care», проповедь № 428, MTP т. 8",
+        "url": "https://www.ccel.org/ccel/spurgeon/sermons08"
+      },
       "verified_quote": false
     }
   ],
@@ -44,10 +51,19 @@
       "Выберите одну фразу, которую скажете себе в начале: «Господь Сам пойдёт пред тобою».",
       "Сделайте пять медленных выдохов."
     ],
-    "breath": { "inhale_sec": 4, "exhale_sec": 6, "phrase_in": "Господь", "phrase_out": "уже там" }
+    "breath": {
+      "inhale_sec": 4,
+      "exhale_sec": 6,
+      "phrase_in": "Господь",
+      "phrase_out": "уже там"
+    }
   },
   "prayer": [
-    { "tradition": "ecumenical", "origin": "editorial_original", "text": "Господи, Ты уже там, куда я иду. Иди передо мной и будь со мной. Дай мне сделать мою часть и доверить Тебе остальное." }
+    {
+      "tradition": "ecumenical",
+      "origin": "editorial_original",
+      "text": "Господи, Ты уже там, куда я иду. Иди передо мной и будь со мной. Дай мне сделать мою часть и доверить Тебе остальное."
+    }
   ],
   "professional_help": {
     "triggers": [
@@ -57,5 +73,8 @@
     ],
     "message": "Тревога ожидания хорошо снижается с помощью КПТ. Специалист поможет подготовиться шаг за шагом."
   },
-  "review": { "status": "draft", "open_issues": [] }
+  "review": {
+    "status": "draft",
+    "open_issues": []
+  }
 }

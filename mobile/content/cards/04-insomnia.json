@@ -13,29 +13,58 @@
   "passages": [
     {
       "kind": "explicit",
-      "book": "Ps", "syn": "4:9", "eng": "4:8",
+      "book": "Ps",
+      "syn": "4:9",
+      "eng": "4:8",
       "context": "4:2-9",
       "why_fits": "Давид ложится спать не потому, что опасность миновала, а потому что безопасность дарует Господь.",
       "misuse_warning": "Бессонница не доказывает недоверия к Богу. Не превращайте этот стих в упрёк себе."
     },
     {
       "kind": "promise",
-      "book": "Ps", "syn": "120:3-4", "eng": "121:3-4",
+      "book": "Ps",
+      "syn": "120:3-4",
+      "eng": "121:3-4",
       "why_fits": "Хранитель не дремлет — значит, мне можно спать. Дежурство над миром не на мне."
     },
     {
       "kind": "explicit",
-      "book": "Ps", "syn": "126:2", "eng": "127:2",
+      "book": "Ps",
+      "syn": "126:2",
+      "eng": "127:2",
       "why_fits": "Сон назван даром, а не наградой за решённые проблемы."
     }
   ],
   "commentary": [
     {
+      "tradition": "jewish",
+      "author": "Мецудат Давид (XVIII в.) на Пс 4:9",
+      "summary": "«Без страха лягу и усну сразу, ибо у тревожащегося и боящегося похищен сон… но я уповаю на Господа и не боюсь».",
+      "source": {
+        "title": "Мецудат Давид на Пс 4:9 (Sefaria)",
+        "url": "https://www.sefaria.org/Metzudat_David_on_Psalms.4.9"
+      },
+      "verified_quote": true
+    },
+    {
       "tradition": "catholic",
       "author": "Катехизис Католической Церкви, 2830",
-      "summary": "Иисус призывает к сыновнему доверию, которое сотрудничает с промыслом Отца и избавляет от изнуряющей тревоги, — но не к праздности.",
-      "source": { "title": "Catechism of the Catholic Church", "url": "https://www.vatican.va/archive/ENG0015/__PAA.HTM" },
-      "verified_quote": false
+      "summary": "Иисус «не призывает нас к праздности, но хочет избавить нас от изнуряющей тревоги и озабоченности» (not inviting us to idleness, but wants to relieve us from nagging worry and preoccupation).",
+      "source": {
+        "title": "Catechism of the Catholic Church",
+        "url": "https://www.vatican.va/archive/ENG0015/__PAA.HTM"
+      },
+      "verified_quote": true
+    },
+    {
+      "tradition": "protestant",
+      "author": "Мэтью Генри, комментарий на Мф 6",
+      "summary": "Благодатная беззаботность — «тот самый сон, который Бог даёт возлюбленному Своему» (Пс 126:2).",
+      "source": {
+        "title": "Matthew Henry, Commentary on Matthew 6 (CCEL)",
+        "url": "https://www.ccel.org/ccel/henry/mhc5"
+      },
+      "verified_quote": true
     }
   ],
   "practice": {
@@ -49,11 +78,24 @@
       "Если хочется что-то не забыть — запишите на бумагу и отложите до утра.",
       "Медленно прочтите Пс 4:9 на нескольких выдохах. Отложите телефон."
     ],
-    "breath": { "inhale_sec": 5, "exhale_sec": 5, "phrase_in": "Спокойно ложусь я", "phrase_out": "и сплю" }
+    "breath": {
+      "inhale_sec": 5,
+      "exhale_sec": 5,
+      "phrase_in": "Спокойно ложусь я",
+      "phrase_out": "и сплю"
+    }
   },
   "prayer": [
-    { "tradition": "ecumenical", "origin": "editorial_original", "text": "Господи, передаю Тебе эту ночь и всё, что меня тревожит. Ты не дремлешь — дай мне уснуть." },
-    { "tradition": "orthodox", "origin": "traditional", "text": "В руце Твои, Господи Иисусе Христе, Боже мой, предаю дух мой; Ты же мя благослови, Ты мя помилуй и живот вечный даруй ми. Аминь." }
+    {
+      "tradition": "ecumenical",
+      "origin": "editorial_original",
+      "text": "Господи, передаю Тебе эту ночь и всё, что меня тревожит. Ты не дремлешь — дай мне уснуть."
+    },
+    {
+      "tradition": "orthodox",
+      "origin": "traditional",
+      "text": "В руце Твои, Господи Иисусе Христе, Боже мой, предаю дух мой; Ты же мя благослови, Ты мя помилуй и живот вечный даруй ми. Аминь."
+    }
   ],
   "professional_help": {
     "triggers": [
@@ -63,5 +105,10 @@
     ],
     "message": "Если сон не налаживается, обратитесь к врачу или психологу: есть эффективные методы (например, КПТ бессонницы)."
   },
-  "review": { "status": "draft", "open_issues": ["Сверить текст вечерней молитвы по молитвослову"] }
+  "review": {
+    "status": "draft",
+    "open_issues": [
+      "Сверить текст вечерней молитвы по молитвослову"
+    ]
+  }
 }

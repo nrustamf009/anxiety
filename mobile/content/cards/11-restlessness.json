@@ -13,14 +13,18 @@
   "passages": [
     {
       "kind": "implicit_narrative",
-      "book": "Luke", "syn": "10:41-42", "eng": "10:41-42",
+      "book": "Luke",
+      "syn": "10:41-42",
+      "eng": "10:41-42",
       "context": "10:38-42",
       "why_fits": "«Заботишься и суетишься» — тот же корень, что в «не заботьтесь» (μεριμνάω). Иисус говорит это с нежностью, повторяя имя.",
       "misuse_warning": "Марфа не «плохая». Служение ценно. Речь о том, чтобы не потерять «одно нужное» внутри дел."
     },
     {
       "kind": "explicit",
-      "book": "Ps", "syn": "130:2", "eng": "131:2",
+      "book": "Ps",
+      "syn": "130:2",
+      "eng": "131:2",
       "why_fits": "«Смирял и успокаивал душу мою» — успокоение здесь активное действие, которому можно учиться."
     }
   ],
@@ -28,9 +32,12 @@
     {
       "tradition": "protestant",
       "author": "Ч. Спёрджен, «Сокровищница Давида», Пс 131",
-      "summary": "Отнятое от груди дитя покоится на матери, а не на том, что она даёт. Так и душа учится покою в Боге, а не в исполнении своих желаний.",
-      "source": { "title": "Treasury of David, Ps 131", "url": "https://www.blueletterbible.org/Comm/spurgeon_charles/tod/ps131.cfm" },
-      "verified_quote": false
+      "summary": "«Успокоить себя — нелёгкое дело: скорее человек усмирит море». Отнятое от груди дитя покоится «на матери, а не на её дарах» (weaned on his mother rather than from her).",
+      "source": {
+        "title": "C. H. Spurgeon, Treasury of David, Ps 131:2",
+        "url": "https://www.blueletterbible.org/Comm/spurgeon_charles/tod/ps131.cfm"
+      },
+      "verified_quote": true
     }
   ],
   "practice": {
@@ -44,10 +51,19 @@
       "Услышьте своё имя дважды, как Марфа: «…, …, ты заботишься о многом».",
       "Спросите: что сейчас «одно нужное»? Сделайте только это."
     ],
-    "breath": { "inhale_sec": 4, "exhale_sec": 6, "phrase_in": "Одно", "phrase_out": "только нужно" }
+    "breath": {
+      "inhale_sec": 4,
+      "exhale_sec": 6,
+      "phrase_in": "Одно",
+      "phrase_out": "только нужно"
+    }
   },
   "prayer": [
-    { "tradition": "ecumenical", "origin": "editorial_original", "text": "Господи, я суечусь о многом. Успокой мою душу, как мать успокаивает ребёнка. Покажи мне одно нужное." }
+    {
+      "tradition": "ecumenical",
+      "origin": "editorial_original",
+      "text": "Господи, я суечусь о многом. Успокой мою душу, как мать успокаивает ребёнка. Покажи мне одно нужное."
+    }
   ],
   "professional_help": {
     "triggers": [
@@ -57,5 +73,8 @@
     ],
     "message": "Постоянное напряжение и раздражительность — частые признаки тревоги или выгорания. Психолог поможет найти причину."
   },
-  "review": { "status": "draft", "open_issues": [] }
+  "review": {
+    "status": "draft",
+    "open_issues": []
+  }
 }

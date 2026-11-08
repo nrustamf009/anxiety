@@ -7,7 +7,7 @@ import type { TranslationCode } from "../content";
  * (Religion and health are special-category data under GDPR art. 9 and 152-FZ art. 10.)
  */
 export type TraditionPref = "all" | "orthodox" | "catholic" | "protestant";
-export type RegionCode = "RU" | "US" | "GB" | "EU";
+export type RegionCode = string;
 
 export interface Settings {
   translation: TranslationCode;

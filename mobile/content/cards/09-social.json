@@ -13,23 +13,30 @@
   "passages": [
     {
       "kind": "explicit",
-      "book": "Ps", "syn": "55:5", "eng": "56:4",
+      "book": "Ps",
+      "syn": "55:5",
+      "eng": "56:4",
       "why_fits": "Давид пишет это, когда его схватили враги. «Что сделает мне плоть?» — оценка людей не последнее слово.",
       "misuse_warning": "Застенчивость — не грех и не «идолопоклонство людям». Не стыдите себя этим стихом."
     },
     {
       "kind": "explicit",
-      "book": "Prov", "syn": "29:25", "eng": "29:25",
+      "book": "Prov",
+      "syn": "29:25",
+      "eng": "29:25",
       "why_fits": "Страх перед людьми назван «сетью» — тем, что сковывает. Выход не в бесстрашии, а в том, на кого опереться."
     }
   ],
   "commentary": [
     {
       "tradition": "protestant",
-      "author": "Дж. Пайпер (Desiring God)",
-      "summary": "Иисус отвечает на тревогу не голым приказом, а доводами и обетованиями. Против страха перед людьми стоит не усилие воли, а обещание Божьего присутствия.",
-      "source": { "title": "Desiring God — Read the Bible to Your Anxiety", "url": "https://desiringgod.org/articles/read-the-bible-to-your-anxiety" },
-      "verified_quote": false
+      "author": "Мэтью Генри, комментарий на Мф 6",
+      "summary": "Христос не хочет, чтобы ученики были «сами себе мучителями» (their own tormentors): страх и беспокойство не прибавляют ничего, но отнимают покой.",
+      "source": {
+        "title": "Matthew Henry, Commentary on Matthew 6 (CCEL)",
+        "url": "https://www.ccel.org/ccel/henry/mhc5"
+      },
+      "verified_quote": true
     }
   ],
   "practice": {
@@ -45,7 +52,11 @@
     ]
   },
   "prayer": [
-    { "tradition": "ecumenical", "origin": "editorial_original", "text": "Господи, мне страшно, что подумают люди. Напомни мне, что Твой взгляд на меня не меняется. Дай мне сказать то, что нужно." }
+    {
+      "tradition": "ecumenical",
+      "origin": "editorial_original",
+      "text": "Господи, мне страшно, что подумают люди. Напомни мне, что Твой взгляд на меня не меняется. Дай мне сказать то, что нужно."
+    }
   ],
   "professional_help": {
     "triggers": [
@@ -55,5 +66,8 @@
     ],
     "message": "Социальная тревога — распространённое и хорошо изученное состояние. КПТ помогает большинству людей."
   },
-  "review": { "status": "draft", "open_issues": [] }
+  "review": {
+    "status": "draft",
+    "open_issues": []
+  }
 }
