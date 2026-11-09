@@ -7,16 +7,14 @@ import type { TranslationCode } from "../content";
  * (Religion and health are special-category data under GDPR art. 9 and 152-FZ art. 10.)
  */
 export type TraditionPref = "all" | "orthodox" | "catholic" | "protestant";
-export type RegionCode = string;
 
 export interface Settings {
   translation: TranslationCode;
   tradition: TraditionPref;
-  region: RegionCode;
   welcomed: boolean;
 }
 
-const DEFAULTS: Settings = { translation: "syn", tradition: "all", region: "RU", welcomed: false };
+const DEFAULTS: Settings = { translation: "syn", tradition: "all", welcomed: false };
 const KEY = "stillwaters.settings.v1";
 
 const Ctx = createContext<{ settings: Settings; ready: boolean; update: (p: Partial<Settings>) => void }>({

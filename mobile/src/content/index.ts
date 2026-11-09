@@ -54,17 +54,6 @@ export interface Card {
   review: { status: string; open_issues: string[] };
 }
 
-export interface CrisisLine {
-  label: string;
-  phone: string;
-  display?: string;
-  note?: string;
-}
-export interface CrisisRegion {
-  code: string;
-  name: string;
-  lines: CrisisLine[];
-}
 
 const bible = bibleJson as {
   meta: Record<TranslationCode, { name: string; license: string; versification: "syn" | "eng" }>;
@@ -75,10 +64,9 @@ const books = booksJson as Record<string, { ru: string; en: string }>;
 export const cards = cardsJson as Card[];
 export const flows = flowsJson as any;
 export const crisis = crisisJson as {
-  verified: boolean;
-  updated: string;
   message: string;
-  regions: CrisisRegion[];
+  steps: string[];
+  directory: { label: string; url: string };
   keywords: Record<string, string[]>;
 };
 export const translations = bible.meta;
