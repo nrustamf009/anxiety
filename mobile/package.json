@@ -34,7 +34,8 @@
     "web": "expo start --web",
     "content": "node scripts/build-content.mjs",
     "typecheck": "tsc --noEmit",
-    "export:web": "expo export --platform web"
+    "export:web": "expo export --platform web",
+    "build:standalone": "npm run content && npm run export:web && node scripts/build-standalone.mjs"
   },
   "private": true
 }
